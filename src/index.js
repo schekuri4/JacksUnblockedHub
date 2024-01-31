@@ -241,13 +241,7 @@ function httpsWorker(glx) {
                 });
                 break;
             }
-            case "/Minecraft": {
-                proxy.ws(req, socket, head, {
-                    ws: true,
-                    target: "ws://localhost:8085"
-                });
-                break;
-            }
+            
             default: {
                 if (bare.shouldRoute(req)) {
                     bare.routeUpgrade(req, socket, head);
