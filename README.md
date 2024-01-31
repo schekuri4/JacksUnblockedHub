@@ -1,7 +1,5 @@
 # Jacks Unblocked Games
 
-Welcome to Jacks Unblocked Games - a comprehensive unblocked gaming site powered by the Ultraviolet proxy. Our platform offers an extensive range of features including support for custom hosted games, a built-in chat system, and full Websocket proxy support.
-
 ## Features
 - **Custom Hosted Games**: Play a variety of games hosted directly on our platform.
 - **Built-in Chat**: Engage with other players through our integrated chat system.
