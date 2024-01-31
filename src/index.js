@@ -1,32 +1,28 @@
 import greenlock from "greenlock-express";
 import httpProxy from 'http-proxy';
-greenlock
-    .init(function getConfig() {
-        return {
-            packageRoot: process.cwd(),
-            configDir: "./greenlock.d",
-            maintainerEmail: 'jacksonkyarger@gmail.com',
-            cluster: false,
-        };
-    })
-    .serve(httpsWorker);
-
 import { createBareServer } from "@tomphttp/bare-server-node";
 import express from "express";
 import { createServer } from "node:http";
 import { hostname } from "node:os";
 import path from "node:path";
 import fs from "fs";
-import { ppid } from "node:process";
 import { WebSocketServer, WebSocket } from 'ws';
+
 const wss = new WebSocketServer({ port: 8081 });
-import config from '../config.json' assert { type: "json" };;
+
+import config from '../config.json';
+import assert from 'assert';
 
 const bare = createBareServer("/outerspace/");
 const server = createServer();
 const app = express(server);
-const __dirname = process.cwd()
+const __dirname = process.cwd();
 
+// Rest of your code...
+
+// Note: I removed the unnecessary `;;` at the end of the import statement
+
+const slurs = config.slurs;
 app.use(express.json());
 app.use(
     express.urlencoded({
